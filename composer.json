@@ -1,0 +1,14 @@
+{
+    "name": "moltin/tax",
+    "description": "Tax calculation",
+    "authors": [
+        {
+            "name": "Moltin Ltd",
+            "email": "support@molt.in"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    }
+}
