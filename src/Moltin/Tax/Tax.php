@@ -15,4 +15,14 @@ class Tax
     {
         return $price * $this->taxModifier;
     }
+
+    public function add($price)
+    {
+        return $price + $this->calculate($price);
+    }
+
+    public function calculate($price)
+    {
+        return $price - $this->deduct($price);
+    }
 }
