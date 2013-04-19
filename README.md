@@ -1,7 +1,7 @@
 Tax Package
 ====
 
-[![Build Status](https://secure.travis-ci.org/moltin/tax.png)](http://travis-ci.org/moltin/cart)
+[![Build Status](https://secure.travis-ci.org/moltin/tax.png)](http://travis-ci.org/moltin/tax)
 
 * [Website](http://molt.in)
 * [License](https://github.com/moltin/tax/master/LICENSE)
