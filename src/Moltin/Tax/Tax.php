@@ -6,6 +6,6 @@ class Tax
     
     public function __construct($value)
     {
-        $this->taxModifier = 1 - ($value - 100);
+        $this->taxModifier = 1 - ($value / 100);
     }
 }
