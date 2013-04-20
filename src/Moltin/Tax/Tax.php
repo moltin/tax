@@ -21,7 +21,7 @@ class Tax
         return $price + $this->calculate($price);
     }
 
-    public function calculate($price)
+    public function rate($price)
     {
         return $price - $this->deduct($price);
     }
