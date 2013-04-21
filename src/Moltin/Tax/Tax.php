@@ -6,9 +6,14 @@ class Tax
     protected $deductModifier;
     protected $addModifier;
     
-    public function __construct($value)
+    public function __construct($value, $after = null)
     {
         $this->percentage = $value;
+
+        if (is_numeric($after)) {
+            $this->percentage = ($value - $after) / ($after * 100);
+        }
+
         $this->deductModifier = 1 - ($value / 100);
         $this->addModifier = 1 + ($value / 100);
     }
