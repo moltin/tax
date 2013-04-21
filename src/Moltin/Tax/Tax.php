@@ -25,7 +25,7 @@ class Tax
 
     public function add($price)
     {
-        return $price * $this->addMofidier;
+        return $price * $this->addModifier;
     }
 
     public function rate($price)
