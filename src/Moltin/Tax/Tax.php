@@ -15,12 +15,12 @@ class Tax
 
     public function deduct($price)
     {
-        return $price * $this->taxModifier;
+        return $price * $this->deductModifier;
     }
 
     public function add($price)
     {
-        return $price + $this->calculate($price);
+        return $price * $this->addMofidier;
     }
 
     public function rate($price)
