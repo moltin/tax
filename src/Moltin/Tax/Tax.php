@@ -14,8 +14,8 @@ class Tax
             $this->percentage = (($after - $value) / $value) * 100;
         }
 
-        $this->deductModifier = 1 - ($value / 100);
-        $this->addModifier = 1 + ($value / 100);
+        $this->deductModifier = 1 - ($this->percentage / 100);
+        $this->addModifier = 1 + ($this->percentage / 100);
     }
 
     public function deduct($price)
