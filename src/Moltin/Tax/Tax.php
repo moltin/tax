@@ -3,12 +3,14 @@
 class Tax
 {
     protected $percentage;
-    protected $taxModifier;
+    protected $deductModifier;
+    protected $addModifier;
     
     public function __construct($value)
     {
         $this->percentage = $value;
-        $this->taxModifier = 1 - ($value / 100);
+        $this->deductModifier = 1 - ($value / 100);
+        $this->addModifier = 1 + ($value / 100);
     }
 
     public function deduct($price)
