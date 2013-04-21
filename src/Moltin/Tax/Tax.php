@@ -11,7 +11,7 @@ class Tax
         $this->percentage = $value;
 
         if (is_numeric($after)) {
-            $this->percentage = ($value - $after) / ($after * 100);
+            $this->percentage = (($after - $value) / $value) * 100;
         }
 
         $this->deductModifier = 1 - ($value / 100);
