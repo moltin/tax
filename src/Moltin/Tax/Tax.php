@@ -49,6 +49,12 @@ class Tax
         return $price * $this->addModifier;
     }
 
+    /**
+     * Calculate the tax rate from a price
+     * 
+     * @param  float $price The price (after tax)
+     * @return float        The tax rate
+     */
     public function rate($price)
     {
         return $price - $this->deduct($price);
