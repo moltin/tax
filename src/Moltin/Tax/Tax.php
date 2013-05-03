@@ -60,6 +60,12 @@ class Tax
         return $price - $this->deduct($price);
     }
 
+    /**
+     * Return the value of protected properties
+     * 
+     * @param  mixed $property The property
+     * @return mixed           The value of the property
+     */
     public function __get($property)
     {
         return $this->$property;
