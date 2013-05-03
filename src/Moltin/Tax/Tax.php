@@ -6,6 +6,15 @@ class Tax
     protected $deductModifier;
     protected $addModifier;
     
+    /**
+     * When constructing the tax class, you can either
+     * pass in a percentage, or a price before and after
+     * tax and have the library work out the tax rate
+     * automatically.
+     * 
+     * @param float $value The percentage of your tax (or price before tax)
+     * @param float $after The value after tax
+     */
     public function __construct($value, $after = null)
     {
         $this->percentage = $value;
