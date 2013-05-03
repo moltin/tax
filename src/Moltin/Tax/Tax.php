@@ -27,6 +27,12 @@ class Tax
         $this->addModifier = 1 + ($this->percentage / 100);
     }
 
+    /**
+     * Deduct the tax from a specified price
+     * 
+     * @param  float $price The price you want to deduct tax from
+     * @return float        $price - tax
+     */
     public function deduct($price)
     {
         return $price * $this->deductModifier;
