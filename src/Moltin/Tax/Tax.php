@@ -28,7 +28,7 @@ class Tax
     }
 
     /**
-     * Deduct the tax from a specified price
+     * Deduct tax from a specified price
      * 
      * @param  float $price The price you want to deduct tax from
      * @return float        $price - tax
@@ -38,6 +38,12 @@ class Tax
         return $price * $this->deductModifier;
     }
 
+    /**
+     * Add tax to a specified price
+     * 
+     * @param  float $price The value you want to add tax to
+     * @return float        $price + tax
+     */
     public function add($price)
     {
         return $price * $this->addModifier;
