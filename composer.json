@@ -1,6 +1,7 @@
 {
     "name": "moltin/tax",
     "description": "Tax calculation",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Moltin Ltd",
