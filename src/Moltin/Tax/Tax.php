@@ -46,6 +46,17 @@ class Tax
         $this->deductModifier = 1 - ($this->percentage / 100);
         $this->addModifier = 1 + ($this->percentage / 100);
     }
+    
+    /**
+     * Subtract the tax from the post-tax rate
+     * 
+     * @param  float $price The post-tax price you want to subtract the tax from
+     * @return float        $price - tax
+     */
+    public function subtract($price)
+    {
+        return $price / $this->addModifier;
+    }
 
     /**
      * Deduct tax from a specified price
