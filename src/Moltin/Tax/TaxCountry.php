@@ -305,8 +305,10 @@ class TaxCountry {
 	public function validateCountry($string) {
 		
 		// Check if the country exists in the array
-		if($key = array_search($string, $this->countries) !== false)
-			return $this->countries[$key];
+        $key = array_search($string, $this->countries);
+		if($key !== false || $key === null)
+			return $key;
+        
 
 		// Check if the key exists
 		if(array_key_exists($string, $this->countries) !== false)
